@@ -1,0 +1,25 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Tests sans navigateur
+        run: node --test tests/unit/*.test.mjs
+      - name: Installation de Playwright (CI uniquement, hors projet audité)
+        run: npm install --no-save playwright@1.63.0 && npx playwright install --with-deps chromium
+      - name: Tests des fixtures (statique et dynamique)
+        run: node --test tests/fixtures.test.mjs
+      - name: Synthèse mesurée
+        run: node tests/evaluate.mjs

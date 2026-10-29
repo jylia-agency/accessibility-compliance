@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tableau de bord : Espace client</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="top">
+    <!-- Bouton iconographique avec nom accessible, icône masquée -->
+    <button class="icon-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+      <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16"><path d="M0 2h16v2H0zM0 7h16v2H0zM0 12h16v2H0z"/></svg>
+    </button>
+    <nav aria-label="Navigation principale">
+      <ul id="menu" class="menu">
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/factures" aria-current="page">Factures</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu" tabindex="-1">
+    <h1>Tableau de bord</h1>
+
+    <!-- Texte de 14 px conforme : #333333 sur #FFFFFF = 12,63:1 -->
+    <p class="small-print">Dernière connexion il y a 2 jours.</p>
+
+    <figure>
+      <img src="graphique-ventes-2025.png" width="600" height="300"
+           alt="Ventes mensuelles 2025 : progression de 1 200 € en janvier à 3 400 € en septembre.">
+      <figcaption>Ventes mensuelles 2025 (détail dans le tableau ci-dessous).</figcaption>
+    </figure>
+    <img src="decor-vague.svg" alt="" width="600" height="40">
+
+    <h2>Vos factures</h2>
+    <table>
+      <caption>Factures des trois derniers mois</caption>
+      <thead>
+        <tr><th scope="col">Numéro</th><th scope="col">Date</th><th scope="col">Montant</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">F-2025-09</th><td>30/09/2025</td><td>120,00 €</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Vos actions</h2>
+    <button type="button" class="btn" id="open-dialog">Modifier mon profil</button>
+
+    <!-- Onglets conformes au motif APG « Tabs » -->
+    <h2>Préférences</h2>
+    <div class="tabs">
+      <div role="tablist" aria-label="Préférences">
+        <button type="button" role="tab" id="tab-notif" aria-selected="true" aria-controls="panel-notif">Notifications</button>
+        <button type="button" role="tab" id="tab-secu" aria-selected="false" aria-controls="panel-secu" tabindex="-1">Sécurité</button>
+      </div>
+      <div role="tabpanel" id="panel-notif" aria-labelledby="tab-notif" tabindex="0">
+        <p>Vous recevez un courriel par facture.</p>
+      </div>
+      <div role="tabpanel" id="panel-secu" aria-labelledby="tab-secu" tabindex="0" hidden>
+        <p>Double authentification activée.</p>
+      </div>
+    </div>
+
+    <h2>Lettre d’information</h2>
+    <form id="newsletter" novalidate>
+      <div class="field">
+        <label for="email">Adresse électronique (obligatoire)</label>
+        <p id="email-hint" class="hint">Format attendu : nom@domaine.fr</p>
+        <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-hint email-error">
+        <p id="email-error" class="error" hidden></p>
+      </div>
+      <button type="submit" class="btn">S’abonner</button>
+    </form>
+    <div id="status" role="status"></div>
+
+    <div class="card">
+      <h3 class="card-title">Facture de septembre en attente</h3>
+    </div>
+  </main>
+
+  <footer>
+    <p><a href="/accessibilite">Accessibilité : non conforme (aucun audit réalisé)</a></p>
+  </footer>
+
+  <!-- Fenêtre modale native : focus géré par showModal(), nommée par son titre -->
+  <dialog id="profile-dialog" aria-labelledby="profile-title">
+    <h2 id="profile-title">Modifier mon profil</h2>
+    <label for="name">Nom</label>
+    <input type="text" id="name" name="name" autocomplete="name">
+    <button type="button" class="btn" id="close-dialog">Fermer</button>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

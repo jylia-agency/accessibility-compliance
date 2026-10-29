@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+*.log
+# Sorties d'audit : ne jamais versionner les rapports d'un projet audité dans ce dépôt
+a11y-audit-*/
+a11y-dynamique-*/
+resultats-dynamiques.json
+*.tmp

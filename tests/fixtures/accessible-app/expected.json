@@ -1,0 +1,16 @@
+{
+  "description": "Fixture accessible : aucun constat « Échec vérifié » ni « Risque potentiel » ne doit être produit, en analyse statique comme dynamique (thèmes clair et sombre). Seuls les contrôles humains listés sont attendus.",
+  "statique": [
+    { "defaut": "M01 pertinence des alternatives à vérifier", "regle": "img-alt-review", "fichier": "index.html", "contient": "graphique-ventes-2025.png", "categorie": "À vérifier manuellement" },
+    { "defaut": "M02 messages d'erreur du formulaire à vérifier", "regle": "form-error-association", "fichier": "index.html", "contient": "newsletter", "categorie": "À vérifier manuellement" },
+    { "defaut": "M03 gestion du focus de <dialog> à vérifier", "regle": "dialog-focus-management", "fichier": "index.html", "contient": "profile-dialog", "categorie": "À vérifier manuellement" }
+  ],
+  "categoriesInterditesStatique": ["Échec vérifié", "Risque potentiel"],
+  "dynamique": {
+    "page": "index.html",
+    "declencheursDialogue": ["#open-dialog"],
+    "themes": ["light", "dark"],
+    "attendus": [],
+    "categoriesInterdites": ["Échec vérifié", "Risque potentiel"]
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "description": "Résultats attendus pour la fixture inaccessible-app. Chaque entrée correspond à un défaut volontaire (voir EXPECTED.md). Une entrée est satisfaite si un constat a la même règle, le même fichier (statique) et contient le fragment indiqué dans son extrait (statique) ou son élément (dynamique), avec la catégorie attendue.",
+  "statique": [
+    {
+      "defaut": "D01 contraste insuffisant",
+      "regle": "css-contrast-text",
+      "fichier": "styles.css",
+      "contient": ".muted",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D01b contraste du bouton Modifier (#FFFFFF sur #73B9B0)",
+      "regle": "css-contrast-text",
+      "fichier": "styles.css",
+      "contient": ".btn-primary",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D02 bouton sans nom accessible (HTML)",
+      "regle": "button-name-missing",
+      "fichier": "index.html",
+      "contient": "menu-btn",
+      "categorie": "Échec vérifié"
+    },
+    {
+      "defaut": "D02b bouton icône SVG sans nom (JSX)",
+      "regle": "button-name-missing",
+      "fichier": "src/Toolbar.jsx",
+      "contient": "<button onClick={onDelete}>",
+      "categorie": "Échec vérifié"
+    },
+    {
+      "defaut": "D03 image informative sans alternative (HTML)",
+      "regle": "img-alt-missing",
+      "fichier": "index.html",
+      "contient": "graphique-ventes-2025.png",
+      "categorie": "Échec vérifié"
+    },
+    {
+      "defaut": "D03b image sans alternative (JSX)",
+      "regle": "img-alt-missing",
+      "fichier": "src/Toolbar.jsx",
+      "contient": "<img src={logo} />",
+      "categorie": "Échec vérifié"
+    },
+    {
+      "defaut": "D04 champ sans étiquette",
+      "regle": "form-label-missing",
+      "fichier": "index.html",
+      "contient": "id=\"code\"",
+      "categorie": "Échec vérifié"
+    },
+    {
+      "defaut": "D04b champ avec placeholder seul",
+      "regle": "form-placeholder-only",
+      "fichier": "index.html",
+      "contient": "id=\"email\"",
+      "categorie": "Échec vérifié"
+    },
+    {
+      "defaut": "D04c champ avec placeholder seul dans un composant partiel",
+      "regle": "form-placeholder-only",
+      "fichier": "src/Toolbar.jsx",
+      "contient": "Rechercher",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D05 focus supprimé en CSS",
+      "regle": "focus-outline-removed",
+      "fichier": "styles.css",
+      "contient": "a:focus, button:focus",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D06 fenêtre de dialogue sans nom",
+      "regle": "dialog-unlabelled",
+      "fichier": "index.html",
+      "contient": "role=\"dialog\"",
+      "categorie": "Échec vérifié"
+    },
+    {
+      "defaut": "D06b gestion du focus de la fenêtre à vérifier",
+      "regle": "dialog-focus-management",
+      "fichier": "index.html",
+      "contient": "role=\"dialog\"",
+      "categorie": "À vérifier manuellement"
+    },
+    {
+      "defaut": "D07 hauteur fixe et débordement masqué",
+      "regle": "text-fixed-height-overflow",
+      "fichier": "styles.css",
+      "contient": ".card-title",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D07b largeur minimale fixe (redistribution)",
+      "regle": "css-fixed-width",
+      "fichier": "styles.css",
+      "contient": ".content",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D08 élément cliquable non focalisable (HTML)",
+      "regle": "click-non-interactive",
+      "fichier": "index.html",
+      "contient": "id=\"save\"",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D08b élément cliquable non focalisable (JSX)",
+      "regle": "click-non-interactive",
+      "fichier": "src/Toolbar.jsx",
+      "contient": "toolbar-action",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D08c role=button non focalisable (JSX)",
+      "regle": "role-interactive-not-focusable",
+      "fichier": "src/Toolbar.jsx",
+      "contient": "role=\"button\"",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D09 tableau sans en-têtes déclarés",
+      "regle": "table-structure",
+      "fichier": "index.html",
+      "contient": "invoices",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D10 animation infinie",
+      "regle": "animation-infinite",
+      "fichier": "styles.css",
+      "contient": "infinite",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D11 langue absente",
+      "regle": "html-lang-missing",
+      "fichier": "index.html",
+      "contient": "<html>",
+      "categorie": "Échec vérifié"
+    },
+    {
+      "defaut": "D12 zoom bloqué",
+      "regle": "viewport-zoom-disabled",
+      "fichier": "index.html",
+      "contient": "user-scalable=no",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D13 intitulé de lien générique (contrôle humain)",
+      "regle": "link-text-generic",
+      "fichier": "index.html",
+      "contient": "En savoir plus",
+      "categorie": "À vérifier manuellement"
+    },
+    {
+      "defaut": "D14 zone de contenu principal absente",
+      "regle": "landmark-main-missing",
+      "fichier": "index.html",
+      "contient": "<body>",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D15 lien d'évitement absent",
+      "regle": "skip-link-missing",
+      "fichier": "index.html",
+      "contient": "<body>",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D16 champ e-mail sans autocomplete",
+      "regle": "form-autocomplete-missing",
+      "fichier": "index.html",
+      "contient": "id=\"email\"",
+      "categorie": "Risque potentiel"
+    },
+    {
+      "defaut": "D17 hiérarchie de titres (h1 puis h3) à évaluer",
+      "regle": "heading-structure",
+      "fichier": "index.html",
+      "contient": "<h1>",
+      "categorie": "À vérifier manuellement"
+    },
+    {
+      "defaut": "D18 messages d'erreur du formulaire à vérifier",
+      "regle": "form-error-association",
+      "fichier": "index.html",
+      "contient": "newsletter",
+      "categorie": "À vérifier manuellement"
+    },
+    {
+      "defaut": "D19 absence de prefers-reduced-motion (AAA, recommandation)",
+      "regle": "reduced-motion-missing",
+      "fichier": "styles.css",
+      "contient": "ticker",
+      "categorie": "Bonne pratique"
+    }
+  ],
+  "nonAttendusStatique": [
+    {
+      "raison": "Bouton dont le contenu est un composant (<TrashIcon />) : le nom rendu est inconnu, l'analyse statique ne doit pas conclure",
+      "regle": "button-name-missing",
+      "fichier": "src/Toolbar.jsx",
+      "contient": "<TrashIcon />"
+    },
+    {
+      "raison": "Comparaison TypeScript/JS « count < 1 » : ne doit pas être interprétée comme une balise",
+      "regle": "*",
+      "fichier": "src/Toolbar.jsx",
+      "contient": "count < 1"
+    },
+    {
+      "raison": "Champ #name de la fenêtre, étiqueté par <label for>",
+      "regle": "form-label-missing",
+      "fichier": "index.html",
+      "contient": "id=\"name\""
+    },
+    {
+      "raison": "Bouton #open-modal pourvu d'un intitulé texte",
+      "regle": "button-name-missing",
+      "fichier": "index.html",
+      "contient": "open-modal"
+    }
+  ],
+  "dynamique": {
+    "page": "index.html",
+    "declencheursDialogue": [
+      "#open-modal"
+    ],
+    "attendus": [
+      {
+        "defaut": "D01 contraste insuffisant (calculé)",
+        "regle": "contrast-text",
+        "element": "p.muted",
+        "categorie": "Échec vérifié"
+      },
+      {
+        "defaut": "D01b contraste du bouton (calculé)",
+        "regle": "contrast-text",
+        "element": "button#open-modal",
+        "categorie": "Échec vérifié"
+      },
+      {
+        "defaut": "D05 focus invisible",
+        "regle": "focus-not-visible",
+        "element": "button#menu-btn",
+        "categorie": "Échec vérifié"
+      },
+      {
+        "defaut": "D06 focus non déplacé à l'ouverture",
+        "regle": "dialog-focus-not-moved",
+        "element": "div#modal",
+        "categorie": "Échec vérifié"
+      },
+      {
+        "defaut": "D06 focus sortant de la fenêtre",
+        "regle": "dialog-focus-escapes",
+        "element": "div#modal",
+        "categorie": "Risque potentiel"
+      },
+      {
+        "defaut": "D06 focus non restitué",
+        "regle": "dialog-focus-not-returned",
+        "element": "div#modal",
+        "categorie": "Échec vérifié"
+      },
+      {
+        "defaut": "D07 texte coupé avec espacement augmenté",
+        "regle": "text-spacing-clipping",
+        "element": "card-title",
+        "categorie": "Échec vérifié"
+      },
+      {
+        "defaut": "D07 texte coupé à 200 % (simulation)",
+        "regle": "text-resize-clipping",
+        "element": "card-title",
+        "categorie": "Risque potentiel"
+      },
+      {
+        "defaut": "D07b défilement horizontal à 320 px",
+        "regle": "reflow-horizontal-scroll",
+        "element": "content",
+        "categorie": "Échec vérifié"
+      },
+      {
+        "defaut": "D08 élément cliquable non atteignable au clavier",
+        "regle": "keyboard-unreachable",
+        "element": "div#save",
+        "categorie": "Échec vérifié"
+      },
+      {
+        "defaut": "D10 animation infinie en cours",
+        "regle": "animation-infinite",
+        "element": "ticker",
+        "categorie": "Risque potentiel"
+      },
+      {
+        "defaut": "D11 langue absente (DOM rendu)",
+        "regle": "html-lang-missing",
+        "element": "html",
+        "categorie": "Échec vérifié"
+      },
+      {
+        "defaut": "D05 focus invisible sur les liens",
+        "regle": "focus-not-visible",
+        "element": "nav.menu > a",
+        "categorie": "Échec vérifié"
+      },
+      {
+        "defaut": "D05 focus invisible sur le bouton d'envoi",
+        "regle": "focus-not-visible",
+        "element": "form#newsletter > button",
+        "categorie": "Échec vérifié"
+      },
+      {
+        "defaut": "D06 Échap ne ferme pas la fenêtre (recommandation APG)",
+        "regle": "dialog-escape",
+        "element": "div#modal",
+        "categorie": "Bonne pratique"
+      },
+      {
+        "defaut": "D10 animation maintenue avec prefers-reduced-motion (AAA)",
+        "regle": "reduced-motion-missing",
+        "element": "ticker",
+        "categorie": "Bonne pratique"
+      }
+    ],
+    "nonAttendus": [
+      {
+        "raison": "Bouton icône de 20 × 20 px : l'exception d'espacement de 2.5.8 s'applique (cercle de 24 px sans intersection)",
+        "regle": "target-size-minimum",
+        "element": "menu-btn"
+      }
+    ]
+  }
+}
