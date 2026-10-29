@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Espace client</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <!-- Défaut 2 : bouton iconographique sans nom accessible -->
+    <button class="icon-btn" id="menu-btn" onclick="toggleMenu()">
+      <svg width="16" height="16" viewBox="0 0 16 16"><path d="M0 2h16v2H0zM0 7h16v2H0zM0 12h16v2H0z"/></svg>
+    </button>
+    <nav class="menu"><a href="/">Accueil</a> <a href="/factures">Factures</a></nav>
+  </header>
+
+  <div class="content">
+    <h1>Tableau de bord</h1>
+
+    <!-- Défaut 1 : texte à contraste insuffisant (#999999 sur #FFFFFF) -->
+    <p class="muted">Dernière connexion il y a 2 jours.</p>
+
+    <!-- Défaut 3 : image porteuse d'information sans alternative -->
+    <img src="graphique-ventes-2025.png" width="600" height="300">
+
+    <h3>Vos actions</h3>
+    <!-- Défaut 8 : élément cliquable non atteignable au clavier -->
+    <div class="btn" id="save" onclick="save()">Enregistrer</div>
+    <button class="btn-primary" id="open-modal" type="button">Modifier mon profil</button>
+    <a href="/aide">En savoir plus</a>
+
+    <!-- Défaut 7 : titre de carte à hauteur fixe, coupé à 200 % -->
+    <div class="card">
+      <h2 class="card-title">Facture de septembre en attente</h2>
+    </div>
+
+    <!-- Défaut 9 : tableau de données sans en-têtes déclarés -->
+    <table class="invoices">
+      <tr><td><b>Numéro</b></td><td><b>Date</b></td><td><b>Montant</b></td></tr>
+      <tr><td>F-2025-09</td><td>30/09/2025</td><td>120,00 €</td></tr>
+    </table>
+
+    <!-- Défaut 4 : formulaire sans étiquettes -->
+    <form id="newsletter">
+      <input type="email" id="email" placeholder="Votre adresse e-mail">
+      <input type="text" id="code">
+      <button type="submit">OK</button>
+    </form>
+
+    <!-- Défaut 10 : animation infinie sans moyen de pause -->
+    <div class="ticker"><p>Offre spéciale : -20 % sur l'abonnement annuel jusqu'à dimanche !</p></div>
+  </div>
+
+  <!-- Défaut 6 : fenêtre modale mal gérée (pas de nom, focus non déplacé, pas d'Échap, pas de retour) -->
+  <div class="modal" id="modal" role="dialog" hidden>
+    <h2>Modifier mon profil</h2>
+    <label for="name">Nom</label>
+    <input type="text" id="name" autocomplete="name">
+    <button type="button" id="close-modal">Fermer</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
