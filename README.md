@@ -31,19 +31,19 @@ Le dossier d'installation doit s'appeler `accessibility-audit` (nom du skill).
 ### Claude Code
 
 ```bash
-git clone https://github.com/florent-lh/accessibility-compliance.git ~/.claude/skills/accessibility-audit
+git clone https://github.com/jylia/accessibility-compliance.git ~/.claude/skills/accessibility-audit
 ```
 
 Ou, pour un projet (skill partagé avec l'équipe) :
 
 ```bash
-git clone https://github.com/florent-lh/accessibility-compliance.git .claude/skills/accessibility-audit
+git clone https://github.com/jylia/accessibility-compliance.git .claude/skills/accessibility-audit
 ```
 
 ### OpenAI Codex
 
 ```bash
-git clone https://github.com/florent-lh/accessibility-compliance.git ~/.codex/skills/accessibility-audit
+git clone https://github.com/jylia/accessibility-compliance.git ~/.codex/skills/accessibility-audit
 ```
 
 Emplacement par défaut `$CODEX_HOME/skills` relevé dans des sources secondaires : vérifier la [documentation officielle de Codex](https://developers.openai.com/codex/skills) pour votre version, puis redémarrer Codex.

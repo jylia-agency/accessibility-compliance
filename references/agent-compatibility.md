@@ -30,9 +30,9 @@ Le dossier d'installation doit porter le nom du skill (`accessibility-audit`), c
 
 ```bash
 # Skill personnel (tous les projets)
-git clone https://github.com/<organisation>/accessibility-compliance.git ~/.claude/skills/accessibility-audit
+git clone https://github.com/jylia/accessibility-compliance.git ~/.claude/skills/accessibility-audit
 # Skill de projet (partagé avec l'équipe via le dépôt)
-git clone https://github.com/<organisation>/accessibility-compliance.git .claude/skills/accessibility-audit
+git clone https://github.com/jylia/accessibility-compliance.git .claude/skills/accessibility-audit
 ```
 
 Le skill est chargé automatiquement lorsque la demande correspond à sa description, ou explicitement via `/accessibility-audit`.
@@ -42,7 +42,7 @@ Le skill est chargé automatiquement lorsque la demande correspond à sa descrip
 Codex prend en charge le format Agent Skills. Les installateurs de skills placent les skills dans `$CODEX_HOME/skills` (par défaut `~/.codex/skills`), d'après des sources secondaires ; la documentation officielle (https://developers.openai.com/codex/skills) n'a pas pu être consultée lors de la rédaction : **vérifier les emplacements** (utilisateur, dépôt) pour votre version.
 
 ```bash
-git clone https://github.com/<organisation>/accessibility-compliance.git ~/.codex/skills/accessibility-audit
+git clone https://github.com/jylia/accessibility-compliance.git ~/.codex/skills/accessibility-audit
 ```
 
 Redémarrer Codex pour qu'il découvre le skill.
